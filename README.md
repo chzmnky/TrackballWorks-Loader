@@ -1,4 +1,4 @@
-trackball-patch
-===============
+TrackballWorks Loader
+=====================
 
-Bootstraps Kensington TrackballWorks to work in OSX Mountain Lion.
+Simple bootstrapping code to get Kensington TrackballWorks working on OSX Mountain Lion.
