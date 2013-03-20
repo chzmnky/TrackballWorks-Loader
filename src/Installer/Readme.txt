@@ -1,0 +1,1 @@
+Simple bootstrapping code to get Kensington TrackballWorks™ working on OS X Lion (10.7) and newer.
