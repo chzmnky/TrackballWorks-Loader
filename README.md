@@ -9,6 +9,8 @@ Due to changes in recent versions of OS X, The Kensington TrackballWorks™ driv
 
 This script bypasses the problem, automatically loading the driver every time you log in. Currently this consists of a simple launchctl plist file, but an installer will follow shortly.
 
+You must install the TrackballWorks™ driver separately, which you can [download here](http://www.kensington.com/kensington/ce/ca/s/1517/trackballworks%E2%84%A2-software-download.aspx).
+
 
 ## Installing 
 
