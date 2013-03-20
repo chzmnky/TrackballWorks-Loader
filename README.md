@@ -5,22 +5,30 @@ Simple bootstrapping code to get Kensington TrackballWorks™ working on OSX (Mo
 
 ## Description
 
-Due to changes in recent versions of OS X, The Kensington TrackballWorks™ driver no longer starts automatically. You can manually start it by opening the TrackballWorks System Preference pane, but who wants to do that every time they start their computer.
-
-This script bypasses the problem, automatically loading the driver every time you log in. Currently this consists of a simple launchctl plist file, but an installer will follow shortly.
+Due to changes in recent versions of OS X, The Kensington TrackballWorks™ driver no longer starts automatically. You can manually start it by opening the TrackballWorks System Preference pane, but who wants to do that every time they start their computer. This script bypasses the problem, automatically loading the driver every time you log in.
 
 You must install the TrackballWorks™ driver separately, which you can [download here](http://www.kensington.com/kensington/ce/ca/s/1517/trackballworks%E2%84%A2-software-download.aspx).
 
 
-## Installing 
+## Installation
 
-1. Copy com.peanuthut.TrackballWorks.load.plist to /Library/LaunchAgents.
-2. Reboot. (You can probably just log out and back in again - but I'm too lazy to test it.)
+1. Run the installer package.
+2. Reboot.
 3. Enjoy you renewed status as a (track)baller.
 4. Bug Kensington to update their drivers so we don't need this anymore.
 
 
-## Uninstalling
+## Manual Installation
+
+If for some reason you don't want to use the included installer, you can follow these steps to manually install the loader.
+
+1. Copy src/com.peanuthut.TrackballWorks.load.plist to /Library/LaunchAgents.
+2. In a terminal window type: "launchctl load /Library/LaunchAgents/com.peanuthut.TrackballWorks.load.plist".
+3. Enjoy you renewed status as a (track)baller.
+4. Bug Kensington to update their drivers so we don't need this anymore.
+
+
+## Uninstallation
 
 1. Delete /Library/LaunchAgents/com.peanuthut.TrackballWorks.load.plist.
 3. Reboot.
@@ -29,7 +37,12 @@ You must install the TrackballWorks™ driver separately, which you can [downloa
 
 ## Known Bugs
 
-The default 'Back' and 'Forward' actions that get mapped to the secondary buttons no longer work, most likely due to changes in the OS. Other actions like Exposé and Snippets appear to be unaffected.
+The default 'Back' and 'Forward' actions that get mapped to the secondary buttons no longer work, most likely due to changes in the OS. Other actions like Exposé and Snippets work without any problems.
+
+
+## Yet To Be Done
+
+A restart shouldn't be required, I just haven't figured out how to properly load it using the extremely convoluted PackageMaker.
 
 
 ## License
